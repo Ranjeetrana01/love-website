@@ -21,7 +21,7 @@ typing();
 
 /* love timer */
 
-let startDate = new Date("2025-08-09");
+let startDate = new Date("2025-10-06");
 
 function updateTimer(){
 
