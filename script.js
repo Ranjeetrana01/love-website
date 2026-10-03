@@ -1,77 +1,76 @@
-/* typing message */
 
-let text="You make my life beautiful every single day ❤️";
-let i=0;
-
-function typing(){
-
-if(i<text.length){
-
-document.getElementById("typing").innerHTML+=text.charAt(i);
-
-i++;
-
-setTimeout(typing,60);
-
-}
-
-}
-
-typing();
-
-/* love timer */
+/* Love Timer */
 
 let startDate = new Date("2025-10-06");
 
 function updateTimer(){
 
-let now = new Date();
+    let now = new Date();
 
-let diff = now - startDate;
+    let diff = now - startDate;
 
-let days = Math.floor(diff/(1000*60*60*24));
+    let days = Math.floor(diff / (1000 * 60 * 60 * 24));
 
-let hours = Math.floor((diff/(1000*60*60))%24);
+    let hours = Math.floor(
+        (diff / (1000 * 60 * 60)) % 24
+    );
 
-let minutes = Math.floor((diff/(1000*60))%60);
+    let minutes = Math.floor(
+        (diff / (1000 * 60)) % 60
+    );
 
-let seconds = Math.floor((diff/1000)%60);
+    let seconds = Math.floor(
+        (diff / 1000) % 60
+    );
 
-document.getElementById("timer").innerHTML =
-days+" Days "+hours+" Hours "+minutes+" Minutes "+seconds+" Seconds ❤️";
-
+    document.getElementById("timer").innerHTML =
+        days + " Days " +
+        hours + " Hours " +
+        minutes + " Minutes " +
+        seconds + " Seconds ❤️";
 }
 
-setInterval(updateTimer,1000);
+updateTimer();
 
-/* surprise button */
+setInterval(updateTimer, 1000);
+
+
+/* Surprise Button */
 
 function surprise(){
 
-alert("I Love You Forever ❤️");
+    alert(
+        "I Love You Forever ❤️\n\n" +
+        "Thank you for being such a beautiful part of my life. " +
+        "Happy Birthday, My Love! 🎂❤️"
+    );
 
 }
 
-/* floating hearts */
 
-setInterval(()=>{
+/* Floating Hearts */
 
-let heart=document.createElement("div");
+setInterval(() => {
 
-heart.className="heart";
+    let heart = document.createElement("div");
 
-heart.innerHTML="❤️";
+    heart.className = "heart";
 
-heart.style.left=Math.random()*100+"vw";
+    heart.innerHTML = "❤️";
 
-heart.style.fontSize=(20+Math.random()*25)+"px";
+    heart.style.left = Math.random() * 100 + "vw";
 
-document.body.appendChild(heart);
+    heart.style.fontSize =
+        (20 + Math.random() * 25) + "px";
 
-setTimeout(()=>{
+    heart.style.animationDuration =
+        (4 + Math.random() * 3) + "s";
 
-heart.remove();
+    document.body.appendChild(heart);
 
-},6000);
+    setTimeout(() => {
+        heart.remove();
+    }, 7000);
 
-},400);
+}, 500);
+
