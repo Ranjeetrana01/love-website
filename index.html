@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -25,19 +24,44 @@
             Today is all about you ✨
         </p>
 
-        <!-- Your Photo -->
-        <div class="photo-frame">
-            <img src="./photo.jpeg" alt="Our Special Moment">
+
+        <!-- Photo Gallery -->
+        <div class="gallery">
+
+            <button class="gallery-btn prev" onclick="changePhoto(-1)">
+                ❮
+            </button>
+
+            <div class="photo-frame">
+                <img id="galleryImage" src="photo1.jpeg" alt="Our Special Moment">
+            </div>
+
+            <button class="gallery-btn next" onclick="changePhoto(1)">
+                ❯
+            </button>
+
         </div>
 
+
+        <!-- Photo Dots -->
+        <div class="dots">
+            <span class="dot active" onclick="showPhoto(0)"></span>
+            <span class="dot" onclick="showPhoto(1)"></span>
+            <span class="dot" onclick="showPhoto(2)"></span>
+        </div>
+
+
+        <!-- Birthday Message -->
         <p class="birthday-message">
             Today is not just your birthday,
             it's a celebration of the beautiful person you are. ❤️
             <br><br>
+
             I hope your day is filled with happiness,
             love, laughter and countless beautiful moments.
             You deserve all the happiness in the world. 🥹❤️
             <br><br>
+
             Happy Birthday to the most special person in my life. 🎂❤️
         </p>
 
@@ -61,8 +85,8 @@
 
 </div>
 
+
 <script src="script.js"></script>
 
 </body>
 </html>
-
